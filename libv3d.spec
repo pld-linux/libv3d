@@ -11,7 +11,7 @@ Patch0:		%{name}-soname.patch
 URL:		http://wolfpack.twu.net/Vertex/libv3d.html
 BuildRequires:	OpenGL-devel
 Requires:	OpenGL
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
