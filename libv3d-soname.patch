@@ -1,0 +1,11 @@
+--- libv3d-0.1.14/libv3d/makefile_append.ini.orig	Mon Jan 20 01:57:06 2003
++++ libv3d-0.1.14/libv3d/makefile_append.ini	Tue Feb 11 11:36:54 2003
+@@ -17,7 +17,7 @@
+ 
+ # Build rules:
+ $(LIBPFX): $(OBJ_C) $(OBJ_CPP)
+-	$(CPP) -shared $(OBJ_C) $(OBJ_CPP) -o $(LIBPFX).so.$(LIBVER) $(LIBS) $(LIB_DIRS)
++	$(CPP) -shared -Wl,-soname=$(LIBPFX).so.0 $(OBJ_C) $(OBJ_CPP) -o $(LIBPFX).so.$(LIBVER) $(LIBS) $(LIB_DIRS)
+ 
+ all: $(LIBPFX)
+ 
