@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		X11/Library
 Source0:	ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
+# Source0-md5:	c2b95a7f82a81b5a8b5987f6fee92b24
 Patch0:		%{name}-soname.patch
 URL:		http://wolfpack.twu.net/Vertex/libv3d.html
 BuildRequires:	OpenGL-devel	
