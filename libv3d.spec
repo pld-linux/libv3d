@@ -34,7 +34,7 @@ wy¶wietlaj±cych.
 Summary:	LibV3D development headers
 Summary(pl):	Pliki nag³ówkowe LibV3D
 Group:		Library/Development
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for LibV3D library.
@@ -50,7 +50,8 @@ Pliki nag³ówkowe biblioteki LibV3D.
 ./configure Linux
 
 %{__make} \
-	CC=%{__cc} CXX=%{__cxx} \
+	CC="%{__cc}" \
+	CXX="%{__cxx}" \
 	CFLAGS="%{rpmcflags} -Wall %{!?debug:-fomit-frame-pointer} -ffast-math -D__USE_BSD" \
 	INC_DIRS="-I/usr/X11R6/include"
 
@@ -69,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README AUTHORS
+%doc AUTHORS README
 %attr(755,root,root) %{_libdir}/libv3d.so.*.*
 
 %files devel
