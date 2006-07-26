@@ -76,5 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libv3d.so
-%attr(644,root,root) %{_includedir}/v3d
-%attr(644,root,root) %{_mandir}/man3/*
+%{_includedir}/v3d
+%{_mandir}/man3/*
