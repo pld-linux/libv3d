@@ -4,7 +4,7 @@ Name:		libv3d
 Version:	0.1.14
 Release:	1
 License:	LGPL
-Group:		X11/Library
+Group:		X11/Libraries
 Source0:	ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
 # Source0-md5:	c2b95a7f82a81b5a8b5987f6fee92b24
 Patch0:		%{name}-soname.patch
@@ -23,8 +23,8 @@ memory with integrated OpenGL library support. V3D data can be loaded
 and then interpreted into GL commands, suitable for GL display lists.
 
 %description -l pl
-Biblioteka libv3d to biblioteka wej¶cia-wyj¶cia dla formatu plików
-V3D - plików modeli 3D generowanych przez modeler Vertex 3D Model
+Biblioteka libv3d to biblioteka wej¶cia-wyj¶cia dla formatu plików V3D
+- plików modeli 3D generowanych przez modeler Vertex 3D Model
 Assembler (st±d nazwa V3D). S³u¿y do odczytu i zapisu danych V3D z/do
 pliku i pamiêci z obs³ug± biblioteki OpenGL. Dane V3D mog± byæ
 wczytane i przekszta³cone na polecenia GL, odpowiednie dla list
@@ -33,7 +33,7 @@ wy¶wietlaj±cych.
 %package devel
 Summary:	LibV3D development headers
 Summary(pl):	Pliki nag³ówkowe LibV3D
-Group:		Library/Development
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
