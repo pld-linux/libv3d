@@ -44,7 +44,7 @@ Pliki nag³ówkowe biblioteki LibV3D.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 ./configure Linux
