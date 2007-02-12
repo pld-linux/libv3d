@@ -1,5 +1,5 @@
 Summary:	LibV3D
-Summary(pl):	Biblioteka LibV3D
+Summary(pl.UTF-8):   Biblioteka LibV3D
 Name:		libv3d
 Version:	0.1.14
 Release:	1
@@ -22,25 +22,25 @@ name V3D). It is used to read and write V3D data to/from file and
 memory with integrated OpenGL library support. V3D data can be loaded
 and then interpreted into GL commands, suitable for GL display lists.
 
-%description -l pl
-Biblioteka libv3d to biblioteka wej¶cia-wyj¶cia dla formatu plików V3D
-- plików modeli 3D generowanych przez modeler Vertex 3D Model
-Assembler (st±d nazwa V3D). S³u¿y do odczytu i zapisu danych V3D z/do
-pliku i pamiêci z obs³ug± biblioteki OpenGL. Dane V3D mog± byæ
-wczytane i przekszta³cone na polecenia GL, odpowiednie dla list
-wy¶wietlaj±cych.
+%description -l pl.UTF-8
+Biblioteka libv3d to biblioteka wejÅ›cia-wyjÅ›cia dla formatu plikÃ³w V3D
+- plikÃ³w modeli 3D generowanych przez modeler Vertex 3D Model
+Assembler (stÄ…d nazwa V3D). SÅ‚uÅ¼y do odczytu i zapisu danych V3D z/do
+pliku i pamiÄ™ci z obsÅ‚ugÄ… biblioteki OpenGL. Dane V3D mogÄ… byÄ‡
+wczytane i przeksztaÅ‚cone na polecenia GL, odpowiednie dla list
+wyÅ›wietlajÄ…cych.
 
 %package devel
 Summary:	LibV3D development headers
-Summary(pl):	Pliki nag³ówkowe LibV3D
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe LibV3D
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for LibV3D library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki LibV3D.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki LibV3D.
 
 %prep
 %setup -q
