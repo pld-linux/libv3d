@@ -1,5 +1,5 @@
 Summary:	LibV3D
-Summary(pl.UTF-8):   Biblioteka LibV3D
+Summary(pl.UTF-8):	Biblioteka LibV3D
 Name:		libv3d
 Version:	0.1.14
 Release:	1
@@ -32,7 +32,7 @@ wyświetlających.
 
 %package devel
 Summary:	LibV3D development headers
-Summary(pl.UTF-8):   Pliki nagłówkowe LibV3D
+Summary(pl.UTF-8):	Pliki nagłówkowe LibV3D
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
