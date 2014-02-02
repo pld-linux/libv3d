@@ -1,19 +1,17 @@
-Summary:	LibV3D
-Summary(pl.UTF-8):	Biblioteka LibV3D
+Summary:	V3D library
+Summary(pl.UTF-8):	Biblioteka V3D
 Name:		libv3d
 Version:	0.1.14
-Release:	1
-License:	LGPL
-Group:		X11/Libraries
-Source0:	ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
-# Source0-md5:	c2b95a7f82a81b5a8b5987f6fee92b24
+Release:	2
+License:	LGPL v2.1
+Group:		Libraries
+Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
+# Source0-md5:	2b125509b0be8b87e0d7262ebd69346d
 Patch0:		%{name}-soname.patch
-URL:		http://wolfpack.twu.net/Vertex/libv3d.html
+URL:		http://freecode.com/projects/libv3d
 BuildRequires:	OpenGL-devel
-Requires:	OpenGL
+BuildRequires:	OpenGL-GLU-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 The libv3d library is a IO library for the V3D file format, a 3D model
@@ -51,9 +49,9 @@ Pliki nagłówkowe biblioteki LibV3D.
 
 %{__make} \
 	CC="%{__cc}" \
-	CXX="%{__cxx}" \
+	CPP="%{__cxx}" \
 	CFLAGS="%{rpmcflags} -Wall %{!?debug:-fomit-frame-pointer} -ffast-math -D__USE_BSD" \
-	INC_DIRS="-I/usr/X11R6/include"
+	LIB_DIRS=
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -61,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man3
+
+/sbin/ldconfig -n $RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,10 +71,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,root) %{_libdir}/libv3d.so.*.*
+%attr(755,root,root) %{_libdir}/libv3d.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libv3d.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libv3d.so
 %{_includedir}/v3d
-%{_mandir}/man3/*
+%{_mandir}/man3/V3D*.3*
+%{_mandir}/man3/v3d_*.3*
