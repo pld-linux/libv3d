@@ -2,7 +2,7 @@ Summary:	V3D library
 Summary(pl.UTF-8):	Biblioteka V3D
 Name:		libv3d
 Version:	0.1.14
-Release:	2
+Release:	3
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
@@ -58,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
+	LIB_DIR=$RPM_BUILD_ROOT%{_libdir} \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man3
 
 /sbin/ldconfig -n $RPM_BUILD_ROOT%{_libdir}
